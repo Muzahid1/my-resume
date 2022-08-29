@@ -97,6 +97,9 @@ body {
   #navbar-right  #nav {
     display: block;
   }
+  #navbar a{
+    float: none;
+  }
  
 }
 
