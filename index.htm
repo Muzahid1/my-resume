@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<!DOCTYpE html>
-=======
-
 <!DOCTYPE html>
->>>>>>> fe58c97ea9e810f74ddd26db2b7362fc72621e44
 <html lang="en">
 
 <head>
@@ -17,34 +12,39 @@
 </head>
 
 <body>
+  <div id="hom"></div>
   <div id="navbar">
     <a href="#default" id="logo">Muzahid Vakaliya</a>
-    <div onclick="nav()" id="nav">&#9776;</div>
+    <button onclick="nav()" id="nav">&#9776;</button>
     <div id="navbar-right">
-      <a class="active" href="#home">Home</a>
+      <a class="active" href="#hom">Home</a>
       <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+      <a href="#contr">About</a>
     </div>
   </div>
 
   <div class="cont">
+
     <div class="mern">
       <div class="animat">
         <h1> <span id="spa">MERN </span>STACK DEVELOPER</h1>
         <img class="code-img" src="./code.png">
       </div>
     </div>
+    <a href="#hom"> <button id="home">&#x2191;</button></a>
+    <div  id="contr">
     <div class="animat">
       <h3> WORK WITH</h3>
     </div>
     <div class="animat2">
       <div class="skill-cont">
-        <div class="box"><img class="skill" src="./html.jpg"> </div>
-        <div class="box"><img class="skill" src="./css.png"></div>
+        <div class="box"><img class="skill " src="./html.jpg"> </div>
+        <div class="box"><img class="skill " src="./css.png"></div>
         <div class="box"><img class="skill" src="./js.jpg"></div>
         <div class="box"><img class="skill" src="./react.png"></div>
         <div class="box"><img class="skill" src="./node.png"></div>
       </div>
+    </div>
     </div>
     <div style="margin-top: 60px; margin-left: 20px;">
       <h2>WORK</h2>
@@ -69,8 +69,17 @@
         <h2>code solution </h2>
       </div>
     </div>
-
-    <div class="footer">
+    <center style="margin-top: 25px;">
+      <h1>CONNETCT WITH ME</h1>
+    </center>
+    <div class="fade">
+      <div class="connect">
+        <a href="https://www.instagram.com/mr.muzu_04/"><img  width="10%" src="./instagram.png"></a>
+        <a href="https://github.com/Muzahid1"> <img width="10%" src="./github.png"></a>
+        <a href="https://www.linkedin.com/in/muzahid-vakaliya-65144b22b/"> <img width="10%" src="./linkedin.png"></a>
+      </div>
+    </div>
+    <div id="contact" class="footer">
       <div class="copy">
         <p>&copy; <strong> Muzahid vakaliya All right reserved </strong></p>
         <p>Designed and developed by Muzahid Vakaliya</p>
@@ -85,7 +94,7 @@
 </body>
 
 </html>
-<<<<<<< HEAD
+
 
 <script>
   $(window).on("load", function () {
@@ -104,6 +113,25 @@
       });
     }).scroll(); //invoke scroll-handler on page-load
   });
+
+
+  $(window).on("load", function () {
+    $(window).scroll(function () {
+      var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+      $(".box").each(function () {
+        /* Check the location of each desired element */
+        var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+        /* If the element is completely within bounds of the window, fade it in */
+        if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+          if ($(this).css("opacity") == 0) { $(this).fadeTo(700, 1); }
+        } else { //object goes out of view (scrolling up)
+          if ($(this).css("opacity") == 1) { $(this).fadeTo(500, 0); }
+        }
+      });
+    }).scroll(); //invoke scroll-handler on page-load
+  });
+
+
+
 </script>
-=======
->>>>>>> fe58c97ea9e810f74ddd26db2b7362fc72621e44
